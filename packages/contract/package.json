@@ -16,7 +16,7 @@
     }
   },
   "scripts": {
-    "compact": "run-compactc src/quick-starter.compact ./src/managed/quick-starter",
+    "compact": "compact compile src/quick-starter.compact ./src/managed/quick-starter",
     "build": "rm -rf dist && find src/managed -type d -empty -delete && tsc --project tsconfig.build.json && mkdir -p dist/managed && test -d ./src/managed/quick-starter && cp -R ./src/managed/quick-starter ./dist/managed/ && mkdir -p ./dist/managed/quick-starter/keys ./dist/managed/quick-starter/zkir && cp ./src/*.compact dist",
     "lint": "eslint src",
     "typecheck": "tsc -p tsconfig.json --noEmit",
