@@ -3,7 +3,7 @@
   "extends": ["//"],
   "tasks": {
     "build": {
-      "outputs": ["compactc/**"],
+      "outputs": ["compact/**"],
       "env": ["COMPACT_HOME"],
       "inputs": ["src/**"],
       "cache": true
