@@ -15,16 +15,16 @@ if (COMPACT_HOME_ENV != null) {
   compactPath = COMPACT_HOME_ENV;
   console.log(`COMPACT_HOME env variable is set; using Compact from ${compactPath}`);
 } else {
-  compactPath = path.resolve(__dirname, '..', 'compactc');
+  compactPath = path.resolve(__dirname, '..', 'compact');
   console.log(`COMPACT_HOME env variable is not set; using fetched compact from ${compactPath}`);
 }
 
-// Debug: Print the full path to compactc and zkir
-console.log(`compactc path: ${path.resolve(compactPath, 'compactc')}`);
+// Debug: Print the full path to compact and zkir
+console.log(`compact path: ${path.resolve(compactPath, 'compact')}`);
 console.log(`zkir path: ${path.resolve(compactPath, 'zkir')}`);
 
 // yarn runs everything with node...
-const child = childProcess.spawn(path.resolve(compactPath, 'compactc'), args, {
+const child = childProcess.spawn(path.resolve(compactPath, 'compact'), args, {
   stdio: 'inherit'
 });
 child.on('exit', (code, signal) => {
